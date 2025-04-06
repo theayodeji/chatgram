@@ -1,8 +1,120 @@
-@import 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap';
+@import "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap";
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-body{
-    font-family: "DM Sans", sans-serif;
+body {
+  font-family: "DM Sans", sans-serif;
 }
+
+
+.hithere {
+  animation: hithere 1.2s ease forwards;
+}
+
+@keyframes hithere {
+  30% { transform: scale(1.2); }
+  40%, 60% { transform: rotate(-20deg) scale(1.2); }
+  50% { transform: rotate(20deg) scale(1.2); }
+  70% { transform: rotate(0deg) scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #474747;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(168, 168, 168);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: true;
+  color-scheme: light;
+
+  /* Light mode */
+  --color-base-100: oklch(98% 0.01 240); 
+  --color-base-200: oklch(95% 0.01 240);
+  --color-base-300: oklch(92% 0.01 240);
+  --color-base-content: oklch(20% 0.02 240); 
+
+  /* --color-primary: oklch(50% 0.25 230);  */
+  --color-primary: orangered; 
+  --color-primary-content: oklch(98% 0.01 230);
+
+  --color-secondary: oklch(60% 0.25 160); 
+  --color-secondary-content: oklch(98% 0.01 160);
+
+  --color-accent: oklch(55% 0.2 140); 
+  --color-accent-content: oklch(98% 0.01 140);
+
+  --color-neutral: oklch(80% 0.01 240); 
+  --color-neutral-content: oklch(20% 0.02 240);
+
+  --color-info: oklch(70% 0.2 220);
+  --color-success: oklch(65% 0.25 160);
+  --color-warning: oklch(80% 0.25 80);
+  --color-error: oklch(65% 0.3 30);
+
+  
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  
+  --border: 1px;
+
+  --depth: 2;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    color-scheme: dark;
+  
+    --color-base-100: oklch(10% 0.01 240); /* Black */
+    --color-base-200: oklch(15% 0.01 240);
+    --color-base-300: oklch(20% 0.01 240);
+    --color-base-content: oklch(95% 0.02 240); /* White text */
+  
+    /* --color-primary: oklch(55% 0.3 230);  */
+  --color-primary: orangered; 
+    --color-primary-content: oklch(98% 0.01 230);
+  
+    --color-secondary: oklch(50% 0.2 160); /* Dark green */
+    --color-secondary-content: oklch(98% 0.01 160);
+  
+    --color-accent: oklch(45% 0.2 140);
+    --color-accent-content: oklch(98% 0.01 140);
+  
+    --color-neutral: oklch(35% 0.01 240); /* Dark gray */
+    --color-neutral-content: oklch(90% 0.02 240);
+  
+    --radius-selector: 1rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.75rem;
+  }

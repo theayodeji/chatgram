@@ -8,7 +8,6 @@ const Profile = () => {
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
-    console.log(file);
     if (!file) return;
 
     const reader = new FileReader();
@@ -21,17 +20,17 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full h-[calc(100vh-72px)]">
       <div className="w-[95%] max-w-7xl mx-auto p-4">
         <h1 className="font-bold text-3xl">
-          Your <span className="text-secondary">Profile</span>
+          Your <span className="text-primary">Profile</span>
         </h1>
 
         <div className="w-full flex flex-col items-center mt-10">
           <div className="w-max relative">
             <div className="rounded-full overflow-hidden border-4 relative">
               <img
-                src={selectedImage || authUser.avatar || "https://yt3.ggpht.com/yti/ANjgQV96rjJJoBtGHdYzxFN7AOYMP_etvMu4ZvUo1CY3XJE=s88-c-k-c0x00ffffff-no-rj"}
+                src={selectedImage || authUser.avatar || "/user.png"}
                 className="rounded-full w-[120px] aspect-square object-cover"
                 alt="Profile"
               />

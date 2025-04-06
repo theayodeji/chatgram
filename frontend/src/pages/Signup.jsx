@@ -37,7 +37,7 @@ const Signup = () => {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       <div className="flex flex-col justify-center items-center p-6 sm-p-12">
-        <div className="w-full max-w-md space-y-4 text-center">
+        <div className="w-full max-w-md space-y-4 lg:space-y-1 text-center">
           <Logo />
 
           <h1 className="text-2xl font-bold mt-2">Create Account</h1>
@@ -48,7 +48,7 @@ const Signup = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 flex flex-col w-3/4 max-w-md mt-3"
+          className="space-y-6 lg:space-y-2 flex flex-col w-3/4 max-w-md mt-3"
         >
           <div className="form-control">
             <label className="label">

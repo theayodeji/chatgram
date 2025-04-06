@@ -10,9 +10,11 @@ import Profile from "./pages/Profile";
 import { useAuthStore } from "./store/useAuthStore";
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
+import useThemeStore from "./store/useThemeStore";
 
 function App() {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
+  const {theme} = useThemeStore();
 
   useEffect(() => {
     checkAuth();
@@ -26,7 +28,7 @@ function App() {
     );
 
   return (
-    <div>
+    <div data-theme={theme} className="lg:h-screen flex flex-col">
       <Navbar />
 
       <Routes>
