@@ -17,4 +17,4 @@ COPY --from=builder /build/package*.json ./
 
 EXPOSE 5173
 
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]
